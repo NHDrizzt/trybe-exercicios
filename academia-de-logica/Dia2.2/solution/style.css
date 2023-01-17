@@ -1,12 +1,54 @@
-* { 
-    
+div {
+    display: block;
+}
+
+.box {
+    padding: 8px 20px;
+    margin: 24px -20px;
+    box-shadow: none!important;
+    background-color: #E7E9EB;
+    border-radius: 5px;
+    padding: 0.01em 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
 
 .zoo {
-    top: 0;
-    left: 0;
+    padding: 8px 20px;
+    margin: 24px -20px;
+    position: relative;
+    top: 50%;
+    left: 25%;
     width: 25%;
     height: 25%;
-    overflow: hidden;
-    pointer-events: none;
 }
+
+.title {
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    text-align: center;
+    color:dodgerblue;
+}
+
+.subtitle {
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+  }
