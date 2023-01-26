@@ -33,13 +33,12 @@ My end result on mobile (you can see also desktop on the links section)
 
 The end result of the frontendmentor
 
-![](./images/image-product-mobile.jpg)
+![](./design/mobile-design.jpg)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://astonishing-haupia-0d0643.netlify.app](https://astonishing-haupia-0d0643.netlify.app)
 
 ## My process
 
@@ -89,8 +88,8 @@ To see how you can add code snippets, see below:
 
 ### Useful resources
 
-- [Youtube](https://www.youtube.com/@KevinPowell) - This guy is awesome on teaching CSS and showing CSS features to anyone independent of low or high level of knowledge on the theme
-- [Youtube](https://www.youtube.com/@WebDevSimplified) - Also another influencer that really helps with the basics and advanced contents of the frontend world.
+- [Kevin](https://www.youtube.com/@KevinPowell) - This guy is awesome on teaching CSS and showing CSS features to anyone independent of low or high level of knowledge on the theme
+- [WDS](https://www.youtube.com/@WebDevSimplified) - Also another influencer that really helps with the basics and advanced contents of the frontend world.
 - [W3Schools](https://www.w3schools.com/) - This one is my go-to site when i forget about a property on either html or css
 
 
