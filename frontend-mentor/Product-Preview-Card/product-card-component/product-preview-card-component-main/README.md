@@ -33,12 +33,12 @@ My end result on mobile (you can see also desktop on the links section)
 
 The end result of the frontendmentor
 
-![](./images/image-product-mobile.jpg)
+![](./design/mobile-design.jpg)
 
 
 ### Links
 
-- Live Site URL: [](https://astonishing-haupia-0d0643.netlify.app)
+- Live Site URL: [https://astonishing-haupia-0d0643.netlify.app](https://astonishing-haupia-0d0643.netlify.app)
 
 ## My process
 
