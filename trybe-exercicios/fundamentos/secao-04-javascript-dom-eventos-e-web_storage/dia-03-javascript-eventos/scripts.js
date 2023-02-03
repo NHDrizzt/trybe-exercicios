@@ -36,10 +36,15 @@ input.addEventListener('input', (event) => {
 const top3 = firstLi.parentElement.previousElementSibling
 
 
-
-
 // - Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
+
+top3.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = 'purple'
+});
+top3.addEventListener('mouseout', (event) => {
+    event.target.style.backgroundColor = ''
+});
 
 // Segue abaixo um exemplo do uso de event.target
 
