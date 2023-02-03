@@ -1,8 +1,5 @@
 const firstLi = document.getElementById('first-li');
-const secondLi = document.getElementById('second-li');
-const thirdLi = document.getElementById('third-li');
 const input = document.getElementById('input');
-const myWebpage = document.getElementById('my-spotrybefy');
 const tech = document.querySelector('.tech')
 
 
