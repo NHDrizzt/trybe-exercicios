@@ -74,4 +74,18 @@ const decode = (string) => {
   return mapString(map, string);
 };
 
-module.exports = { myRemove, myFizzBuzz, encode, decode };
+const techList = (arrTech, person) => {
+  if (arrTech.length === 0) return "Vazio!";
+  let resultArray = [];
+  arrTech.sort();
+  for (let i = 0; i < arrTech.length; i++) {
+    const newObject = {
+      name: person,
+      tech: arrTech[i],
+    };
+    resultArray.push(newObject);
+  }
+  return resultArray;
+};
+
+module.exports = { myRemove, myFizzBuzz, encode, decode, techList };
