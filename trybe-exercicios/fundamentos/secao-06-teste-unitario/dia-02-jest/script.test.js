@@ -7,7 +7,7 @@ const {
   hydrate,
 } = require("./script");
 
-describe("myRemove tests", function () {
+describe("myRemove tests", () => {
   test("remove equal number inside array", () => {
     expect(myRemove([1, 2, 3, 4], 3)).toEqual([1, 2, 4]);
   });

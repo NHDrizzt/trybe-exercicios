@@ -76,7 +76,7 @@ const decode = (string) => {
 
 const techList = (arrTech, person) => {
   if (arrTech.length === 0) return "Vazio!";
-  let resultArray = [];
+  const resultArray = [];
   arrTech.sort();
   for (let i = 0; i < arrTech.length; i++) {
     const newObject = {
@@ -90,7 +90,7 @@ const techList = (arrTech, person) => {
 
 const hydrate = (str) => {
   const numbers = str.match(/\d+/g);
-  const result = numbers.reduce((acc, cur) => acc + parseInt(cur), 0);
+  const result = numbers.reduce((acc, cur) => acc + parseInt(cur, 10), 0);
   if (result <= 1) {
     return `${result} copo de água`;
   } else {
