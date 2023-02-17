@@ -88,4 +88,14 @@ const techList = (arrTech, person) => {
   return resultArray;
 };
 
-module.exports = { myRemove, myFizzBuzz, encode, decode, techList };
+const hydrate = (str) => {
+  const numbers = str.match(/\d+/g);
+  const result = numbers.reduce((acc, cur) => acc + parseInt(cur), 0);
+  if (result <= 1) {
+    return `${result} copo de água`;
+  } else {
+    return `${result} copos de água`;
+  }
+};
+
+module.exports = { myRemove, myFizzBuzz, encode, decode, techList, hydrate };
