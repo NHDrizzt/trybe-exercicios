@@ -16,6 +16,20 @@ function myRemove(arr, item) {
 
 }
 
-console.log(myRemove([1,2,3,4], 3))
+function myFizzBuzz(num) {
 
-module.exports = {myRemove}
+    if (typeof num !== 'number') return false;
+
+    if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
+
+    if (num % 3 === 0) return 'fizz';
+
+    if (num % 5 === 0) return 'buzz';
+
+    return num;
+
+}
+
+console.log(myFizzBuzz(3))
+
+module.exports = {myRemove, myFizzBuzz}
