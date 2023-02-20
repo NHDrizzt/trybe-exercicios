@@ -17,7 +17,8 @@ A saída deve ter o seguinte formato:
 */
 
 function findOldestSon(pedroAge, kidsAge){
-  return `O filho mais velho tem ${pedroAge - kidsAge.reduce((acc, kidsAge) => acc + kidsAge)} anos.`
+  kidsAge.push(pedroAge - kidsAge.reduce((acc, kidsAge) => acc + kidsAge));
+  return `O filho mais velho tem ${Math.max(...kidsAge)} anos.`
 }
 
 module.exports = findOldestSon;
