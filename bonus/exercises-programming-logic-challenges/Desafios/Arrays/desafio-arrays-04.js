@@ -19,8 +19,16 @@ Obs: Os retornos tem que ser dados do tipo boolean.
 */
 
 function dataType(types){
-  // Desenvolva seu código aqui.
-  return // Retorne o resultado aqui
+  const firstType = typeof types[0];
+  for (let i = 0; i < types.length; i++) {
+    let item = types
+    if (firstType !== typeof types[i]) {
+      return false
+    }
+  }
+  return true
 }
+
+dataType('jhon', 'kjunt', 1)
 
 module.exports = dataType;

@@ -17,7 +17,11 @@ Caso contrário:
 */
 
 function cnhProcess(name, birthYear){
-  // Desenvolva seu código nessa função
+    const idade = new Date().getFullYear() - birthYear
+    if (idade >= 18) {
+        return `${name} tem ${idade} anos de idade e pode iniciar o processo.`
+    }
+    return `${name} tem ${idade} anos de idade e não pode iniciar o processo.`
 }
 
 module.exports = cnhProcess;

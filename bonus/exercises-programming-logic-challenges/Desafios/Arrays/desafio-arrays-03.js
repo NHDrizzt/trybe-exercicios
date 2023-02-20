@@ -17,8 +17,10 @@ Caso o contrário:
 */
 
 function findGuest(names, guest){
-  // Desenvolva seu código nessa função
-  return // Retorne o resultado aqui
+  if (names.includes(guest)) {
+    return 'O nome está na lista.';
+  }
+  return 'O nome não está na lista.';
 }
 
 module.exports = findGuest;
