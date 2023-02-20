@@ -17,8 +17,7 @@ A saída deve ter o seguinte formato:
 */
 
 function findOldestSon(pedroAge, kidsAge){
-  // Desenvolva seu código aqui.
-  return // Retorne o resultado aqui
+  return `O filho mais velho tem ${pedroAge - kidsAge.reduce((acc, kidsAge) => acc + kidsAge)} anos.`
 }
 
 module.exports = findOldestSon;
