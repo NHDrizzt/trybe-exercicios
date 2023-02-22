@@ -22,8 +22,23 @@ Saída:
 
  */
 
+const vals = {
+    Do: 'I',
+    Re: 'II',
+    Mi: 'III',
+    Fa: 'IV',
+    Sol: 'V',
+    La: 'VI',
+    Si: 'VII'
+}
+
 function musicalNotes(notes) {
-  // Desenvolva seu código nessa função
+    const notesWithNoAccentuation = notes.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    const hasValue = vals.hasOwnProperty(`${notesWithNoAccentuation}`)
+    if (hasValue) {
+        return vals[notesWithNoAccentuation];
+    }
+    return 'Invalid note';
 }
 
 module.exports = musicalNotes;

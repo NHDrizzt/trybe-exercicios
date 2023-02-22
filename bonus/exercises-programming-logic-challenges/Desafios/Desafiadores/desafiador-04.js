@@ -45,8 +45,51 @@ Saída:
 -----------------------------
 
 */
+
 function musicalNotes2(notes){
-  // Desenvolva seu código nessa função
+    const arrOfNotes = {
+        Dó: {
+            degree: 'I',
+            third: 'Maior',
+            scale: 'Jônia'
+        },
+        Ré: {
+            degree: 'II',
+            third: 'Menor',
+            scale: 'Dórica',
+        },
+        Mi: {
+            degree: 'III',
+            third: 'Menor',
+            scale: 'Frígia',
+        },
+        Fá: {
+            degree: 'IV',
+            third: 'Maior',
+            scale: 'Lídia',
+        },
+        Sol: {
+            degree: 'V',
+            third: 'Maior',
+            scale: 'Mixolídia',
+        },
+        Lá: {
+            degree: 'VI',
+            third: 'Menor',
+            scale: 'Eólia',
+        },
+        Si: {
+            degree: 'VII',
+            third: 'Menor',
+            scale: 'Lócrio',
+        },
+    }
+    let arrResult = [];
+    notes.forEach((item => {
+        arrResult.push(arrOfNotes[item])
+    }))
+    return arrResult
 }
 
+musicalNotes2(['Mi', 'Sol', 'Si'])
 module.exports = musicalNotes2;

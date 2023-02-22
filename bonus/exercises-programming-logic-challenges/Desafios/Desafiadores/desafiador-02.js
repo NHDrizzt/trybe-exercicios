@@ -22,7 +22,7 @@ Se o valor recebido for igual a zero ou não for do tipo number, retorne:
 */
 
 function squareRoot(number){
-  // Desenvolva seu código nessa função
+    return Math.sqrt(number)
 }
 
 module.exports = squareRoot;
