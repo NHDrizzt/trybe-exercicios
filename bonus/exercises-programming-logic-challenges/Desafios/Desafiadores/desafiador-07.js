@@ -14,9 +14,15 @@ Saída:
 --------------------------------------------------------
 
 */
-
+function convertFarInCelsius(item) {
+    return (item - 32) * 5/9
+}
 function averageTemperature(anualRegister){
-  // Desenvolva seu código nessa função
+    let sum = 0
+    anualRegister.forEach((item) => {
+       sum += convertFarInCelsius(item)
+    });
+    return `A média anual de temperatura em graus Celsius é ${(sum/12).toFixed(2)}.`;
 }
 
 module.exports = averageTemperature;

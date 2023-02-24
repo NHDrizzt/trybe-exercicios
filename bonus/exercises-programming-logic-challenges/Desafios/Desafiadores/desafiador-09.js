@@ -34,7 +34,7 @@ Caso a pessoa não se enquadre nessas categorias acima, retorne:
 */
 
 function viewerTvShows(dataViewer){
-  // Desenvolva seu código nessa função
+
 }
 
 module.exports = viewerTvShows;

@@ -13,9 +13,18 @@ A classificação dessa Copa é baseada no número de pontos ganhos pelas equipe
 Escreva um algoritmo que recebe a quantidade de partidas jogadas e um objeto no qual as chaves são os nomes dos times e os valores a pontuação alcançada por cada um e retorne a quantidade de partidas empatadas.
 
 */
+const test8 = {
+    liverpool: 4,
+    chelsea: 1,
+    arsenal: 4,
+    city: 1,
+};
 
 function numberTies(matches, scores){
-  // Desenvolva seu código nessa função
+    const sumPoints = Object.values(scores).reduce((sum, number) => sum + number);
+    return Math.abs(3 * matches - sumPoints);
 }
+
+console.log(numberTies(2, test8))
 
 module.exports = numberTies;
