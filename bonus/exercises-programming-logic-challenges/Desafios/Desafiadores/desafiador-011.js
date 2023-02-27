@@ -43,7 +43,7 @@ Saída:
 */
 
 function musicalNotes3(arrNotes){
-  // Desenvolva seu código nessa função
+
 }
 
 module.exports = musicalNotes3;
