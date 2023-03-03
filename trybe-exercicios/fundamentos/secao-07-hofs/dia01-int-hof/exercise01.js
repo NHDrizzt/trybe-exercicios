@@ -35,7 +35,7 @@ const books = [
         genre: 'Ficção Científica',
         author: {
             name: 'Frank Herbert',
-            birthYear: 1920,
+            birthYear: 1921,
         },
         releaseYear: 1965,
     },
@@ -64,18 +64,50 @@ const books = [
 // Adicione o código do exercício aqui:
 
 // requisito 01
-const expectedResult = 'Stephen King';
 const authorBornIn1947 = () => books.find((item) => item.author.birthYear === 1947)
-console.log(authorBornIn1947().author.name)
+//console.log(authorBornIn1947().author.name)
 
 // requisito 02
-const expectedResult = 'Duna';
 const smallerName = () => {
     let menorValor = 1000;
+    let nameBook;
     books.forEach((item) => {
         if (item.name.length < menorValor) {
-            min = item.name.length
+            menorValor = item.name.length
+            nameBook = item.name
         }
     })
+   return  nameBook
+}
+//console.log(smallerName())
+
+const getNamedBook = () => books.find((item) => item.name.length === 26)
+
+//console.log(getNamedBook())
+
+function everyoneWasBornOnSecXX() { return books.every((item) => item.author.birthYear > 1900 && item.author.birthYear <= 2000 )}
+
+//console.log(everyoneWasBornOnSecXX())
+
+const someBookWasReleaseOnThe80s = () => books.some((item) => item.releaseYear >= 1980 && item.releaseYear <= 1990);
+
+//console.log(someBookWasReleaseOnThe80s())
+
+const expectedResult = false;
+
+const authorUnique = () => {
+    let result = false;
+    let authorBirthYear;
+    books.forEach((item, index) => {
+        authorBirthYear = item.author.birthYear;
+        const booksFromIndex = books.slice(index + 1)
+        booksFromIndex.forEach((element) => {
+            if (authorBirthYear === element.author.birthYear) {
+                result = true;
+            }
+        })
+    })
+    return result;
 }
 
+//console.log(authorUnique())
