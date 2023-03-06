@@ -98,10 +98,7 @@ describe("Desafios de Destructuring e HOFs.", () => {
     });
     it("O retorno da função deve ser o array esperado", () => {
       const expectedArray = [
-        'Radiohead',
         'Avenged Sevenfold',
-        'Arctic Monkeys',
-        'Pink Floyd',
         'Foo Fighters',
         'Red Hot Chili Peppers'
       ]

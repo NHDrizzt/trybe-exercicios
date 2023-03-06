@@ -5,8 +5,15 @@ retornando uma string no seguinte formato: "os melhores álbuns do Radiohead: In
 */
 
 const getBestAlbuns = () => {
-
+    const [banda1] = data.bands
+    const {bandName, bestAlbuns} = banda1
+    const allBestAlbunsNames = bestAlbuns.reduce((acc, { name }) => {
+        acc.push(name)
+        return acc
+    }, [])
+    return `Os melhores álbuns do ${bandName}: ${allBestAlbunsNames}`
 }
 
+console.log(getBestAlbuns())
 
 module.exports = getBestAlbuns;
