@@ -10,11 +10,20 @@ A média deve ter até 2 casas decimais de precisão.
 */
 
 function factorial15(number) {
-  // Desenvolva aqui a lógica para calcular o fatorial
+  let result = 1;
+  while(number>=1) {
+    result *= number
+    number--
+  }
+  return result;
 }
 
 function meanFactorialFromAToB(a, b) {
-  // Desenvolva aqui a lógica para calcular a média dos fatoriais de 0 a 5
+  let arr = []
+  for (let i = a; i <= b; i++) {
+    arr.push(factorial15(i))
+  }
+  return parseFloat((arr.reduce((acc, cur) => acc + cur) / arr.length).toFixed(2))
 }
 
 module.exports = {

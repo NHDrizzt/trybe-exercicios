@@ -41,8 +41,45 @@ Saída: "CPF válido"
 
 */
 
-function cpfValidator(cpf){
-  // Desenvolva seu código nessa função
+function checkIfEqual(numbersOnlyCpf) {
+    const firstValue = numbersOnlyCpf[0];
+    return !numbersOnlyCpf.every((item) => item === firstValue)
 }
+
+function calcCpfFirstDigit(cpfArray) {
+    const sum = cpfArray
+        .slice(0, 9)
+        .reduce((sum, number, index) => sum + number * (index + 1), 0);
+    const rest = sum % 11;
+    if (rest === 10) {
+        return 0;
+    }
+    return rest;
+}
+function calcCpfSecondDigit(cpfArray) {
+    const sum = cpfArray
+        .slice(0, 10)
+        .reduce((sum, number, index) => sum + number * index, 0);
+    const rest = sum % 11;
+    if (rest === 10) {
+        return 0;
+    }
+    return rest;
+}
+
+function cpfValidator(cpf){
+    const numbersOnlyCpf = cpf.replace(/\D/g, "").split('').map((item) => parseInt(item));
+    let isValidCpf = checkIfEqual(numbersOnlyCpf)
+    if (!isValidCpf) return 'CPF inválido';
+    if (
+        calcCpfFirstDigit(numbersOnlyCpf) === numbersOnlyCpf[9] &&
+        calcCpfSecondDigit(numbersOnlyCpf) === numbersOnlyCpf[10]
+    ) {
+        return "CPF válido";
+    }
+    return 'CPF inválido'
+}
+
+console.log(cpfValidator("397.606.448-43"));
 
 module.exports = cpfValidator;
