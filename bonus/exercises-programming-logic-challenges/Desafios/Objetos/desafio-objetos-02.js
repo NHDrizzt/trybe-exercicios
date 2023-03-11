@@ -29,8 +29,19 @@ Desafio: faça sem usar estruturas condicionais (ifs ou switches).
 
 */
 
+const obj = [
+    { classe: 'Mago', PV: '5PV', equipamento: 'Varinha'},
+    { classe: 'Arqueiro', PV: '10PV', equipamento: 'Arco Curto'},
+    { classe: 'Guerreiro', PV: '15PV', equipamento: 'Espada'},
+    { classe: 'Cavaleiro', PV: '20PV', equipamento: 'Armadura Completa'},
+]
+
+
 function fantasyGame2(className) {
-  // Desenvolva seu código nessa função
+    const findClass = obj.find((item) => item.classe === className)
+    return findClass ? `${findClass.PV}, ${findClass.equipamento}` : '';
 }
+
+console.log(fantasyGame2('Guerreiro'))
 
 module.exports = fantasyGame2;

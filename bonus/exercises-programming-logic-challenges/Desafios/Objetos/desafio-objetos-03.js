@@ -22,8 +22,16 @@ Desafio: faça sem usar estruturas condicionais (ifs ou switches).
 
 */
 
-function musicalScale(note) {
-  // Desenvolva seu código nessa função
+const obj = {
+    Do: 'I',
+    Re: 'II',
+    Mi: 'III'
 }
+
+function musicalScale(note) {
+  return obj[note];
+}
+
+console.log(musicalScale('Do'))
 
 module.exports = musicalScale;

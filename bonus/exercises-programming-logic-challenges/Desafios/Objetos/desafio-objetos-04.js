@@ -18,8 +18,16 @@ O retorno deve ser no seguinte formato:
 
 */
 
+const people = [
+    { name: 'Ramon', age: 35 },
+    { name: 'José', age: 28 },
+    { name: 'Amanda', age: 19 }
+];
+
 function getOldPerson(arrPeople) {
-  // Desenvolva seu código nessa função
+  return arrPeople.reduce((acc, {age}) => ((acc > age) ? acc : age), 0)
 }
+
+console.log(getOldPerson(people))
 
 module.exports = getOldPerson;

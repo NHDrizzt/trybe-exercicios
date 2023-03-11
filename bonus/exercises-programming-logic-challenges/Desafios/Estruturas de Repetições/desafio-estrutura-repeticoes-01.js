@@ -16,7 +16,9 @@ Saída:
 */
 
 function encode(string){
-  // Desenvolva seu código nessa função
+    return string.split('').map((item, index) => index * 3).join('')
 }
+
+console.log(encode('trybe'))
 
 module.exports = encode;

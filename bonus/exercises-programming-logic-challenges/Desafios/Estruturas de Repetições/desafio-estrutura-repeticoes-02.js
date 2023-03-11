@@ -15,7 +15,7 @@ Considerando a mesma lógica, escreva um algoritmo que irá somar todos números
 */
 
 function accumulator(limit){
-  // Desenvolva seu código nessa função
+
 }
 
 module.exports = accumulator;
