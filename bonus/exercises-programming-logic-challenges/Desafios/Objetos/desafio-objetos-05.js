@@ -46,7 +46,7 @@ Desafio: faça sem usar estruturas condicionais (ifs ou switches).
 */
 
 const obj = [
-    { classe: 'Mago', PV: '5PV', pvnivel: '+2PV', equipamento: 'Varinha'},
+    { classe: 'Mago', PV: '5PV', pvnivel: '+20PV', equipamento: 'Varinha'},
     { classe: 'Arqueiro', PV: '10PV', pvnivel: '+3PV', equipamento: 'Arco Curto'},
     { classe: 'Guerreiro', PV: '15PV', pvnivel: '+4PV', equipamento: 'Espada'},
     { classe: 'Cavaleiro', PV: '20PV', pvnivel: '+5PV', equipamento: 'Armadura Completa'},
@@ -56,7 +56,8 @@ const obj = [
 function fantasyGame3(className, level) {
   const findClass = obj.find(({classe}) => classe === className);
   const newPV = parseFloat(findClass.PV.match(/\d+/g).toString());
-  const newPv2 = (parseFloat(findClass.pvnivel.split('')[1]) * level) - parseFloat(findClass.pvnivel.split('')[1]);
+    const newPvNivel = parseFloat(findClass.pvnivel.match(/\d+/g).toString());
+  const newPv2 = (newPvNivel * level) - newPvNivel;
   return `${findClass.classe}, nivel ${level}, ${newPV + newPv2}, ${findClass.equipamento}`
 }
 
